@@ -1,5 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic de node
+node_modules
+.pnpm-debug.log*
+
+# IDE - VS Code / IntelliJ
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dossier de Build (Vite génère /dist)
+/dist
+dist-ssr
+*.local
+
+# Variables d'environnement 
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Tests
+/coverage
+/.nyc_output
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers personnels
 ATTRIBUTIONS.md
-node_modules/
 CONTACT_SETUP.md
 guidelines/
 READ-ME.md
