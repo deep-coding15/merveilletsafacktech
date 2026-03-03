@@ -1,9 +1,55 @@
 import { motion } from "motion/react";
 import { BookOpen, Clock, ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router";
+import { categories } from "../categories";
 
 export function Blog() {
   const upcomingPosts = [
+    {
+      title: "Mon premier pipeline CI CD avec Github Actions et AWS EC2",
+      description: "Mes apprentissages sur la conception de systèmes scalables, les patterns d'architecture, et comment aborder le system design sans expérience professionnelle.",
+      category: "DevOps",
+      readTime: "8 min",
+      date: "19 Fev 2026",
+      slug: "premier-ci-cd-pipeline",
+    },
+    {
+      title: "Pourquoi ne pas pousser le fichier *.env* dans un repo github",
+      description: "Mes apprentissages sur la conception de systèmes scalables, les patterns d'architecture, et comment aborder le system design sans expérience professionnelle.",
+      category: "Notes",
+      readTime: "8 min",
+      date: "20 Fev 2026",
+      slug: "file-dot-env-github",
+    },
+    {
+      title: "Pourquoi on ne supprime (presque) jamais les données en génie logiciel ?",
+      description: `DELETE FROM users WHERE id = 5;
+        Vraiment ?
+        Dans la réalité des systèmes en production, la requête ressemble beaucoup plus à :
+        UPDATE users SET status = 'deleted' AND deleted_at = NOW() WHERE id = 5;
+        Et ce n’est pas un hasard.
+      `,
+      category: "Architecture Logicielle",
+      readTime: "8 min",
+      date: "A venir",
+      slug: "not-only-delete-data",
+    },
+    /* {
+      title: "Pourquoi on ne supprime (presque) jamais les données en génie logiciel ?",
+      description: `DELETE FROM users WHERE id = 5;
+        Vraiment ?
+        Dans la réalité des systèmes en production, la requête ressemble beaucoup plus à :
+        UPDATE users SET status = 'deleted' AND deleted_at = NOW() WHERE id = 5;
+        Et ce n’est pas un hasard.
+      `,
+      category: "Architecture Logicielle",
+      readTime: "8 min",
+      date: "A venir",
+      slug: "not-only-delete-data",
+    }, */
+  ]
+
+  /* const upcomingPosts = [
     {
       title: "Comprendre le System Design en tant qu'étudiant en ingénierie",
       description: "Mes apprentissages sur la conception de systèmes scalables, les patterns d'architecture, et comment aborder le system design sans expérience professionnelle.",
@@ -68,15 +114,7 @@ export function Blog() {
       date: "À venir",
       slug: "",
     },
-  ];
-
-  const categories = [
-    { name: "Architecture", color: "bg-purple-600" },
-    { name: "DevOps", color: "bg-blue-600" },
-    { name: "Développement", color: "bg-green-600" },
-    { name: "Base de données", color: "bg-orange-600" },
-    { name: "Productivité", color: "bg-pink-600" },
-  ];
+  ]; */
 
   const container = {
     hidden: { opacity: 0 },
@@ -111,7 +149,7 @@ export function Blog() {
             Réflexions & Apprentissages
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-            Mes expériences en développement, architecture système, DevOps et infrastructure. 
+            Mes expériences en développement, architecture système, DevOps et infrastructure.
             Un journal de mon évolution technique et des leçons apprises en chemin.
           </p>
         </motion.div>
@@ -126,18 +164,10 @@ export function Blog() {
           {upcomingPosts.map((post) => {
             const CardContent = (
               <>
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start justify-between mb-4">                  
                   <span
                     className={`px-3 py-1 text-xs rounded-full text-white ${
-                      post.category === "Architecture"
-                        ? "bg-purple-600"
-                        : post.category === "DevOps"
-                        ? "bg-blue-600"
-                        : post.category === "Développement"
-                        ? "bg-green-600"
-                        : post.category === "Base de données"
-                        ? "bg-orange-600"
-                        : "bg-pink-600"
+                      categories.find((c) => c.name === post.category)?.color || "bg-gray-500"
                     }`}
                   >
                     {post.category}
@@ -153,7 +183,7 @@ export function Blog() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                   {post.title}
                 </h3>
-                
+
                 <p className="text-gray-400 mb-4 leading-relaxed">
                   {post.description}
                 </p>
@@ -167,7 +197,7 @@ export function Blog() {
 
             return (
               <motion.div key={post.title} variants={item}>
-                {post.slug ? (
+                {post.slug != '' &&  post.date.toLowerCase() !== 'a venir' ? (
                   <Link
                     to={`/blog/${post.slug}`}
                     className="block bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/40 transition-all duration-300 cursor-pointer group"
@@ -179,6 +209,7 @@ export function Blog() {
                     {CardContent}
                   </div>
                 )}
+                
               </motion.div>
             );
           })}
@@ -198,7 +229,7 @@ export function Blog() {
               Articles en cours de rédaction
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-6">
-              Je prépare actuellement du contenu de qualité basé sur mes expériences réelles et mes apprentissages. 
+              Je prépare actuellement du contenu de qualité basé sur mes expériences réelles et mes apprentissages.
               Ces articles seront publiés progressivement au fur et à mesure de mes avancées dans mes projets et mes études.
             </p>
             <div className="bg-gray-900/60 border border-purple-500/20 rounded-lg p-6 max-w-xl mx-auto">

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router";
 import { motion } from "motion/react";
 import { ArrowLeft, Clock, Calendar, User, Tag } from "lucide-react";
+import { categories } from "../categories";
 
 export function BlogPost() {
   const { slug } = useParams();
@@ -21,7 +22,92 @@ export function BlogPost() {
       conclusion: string;
     };
   }> = {
-    "system-design-etudiant": {
+    "premier-ci-cd-pipeline": {
+      title: "Pourquoi ne pas pousser le fichier *.env* dans un repo github",
+      category: "Notes",
+      readTime: "8 mins",
+      date: "22 Février 2026",
+      author: "Merveille Tsafack",
+      tags: [''],
+      content: {
+        introduction: 'string',
+        sections: [
+          {
+            title: "string",
+            content: [""],
+          }
+        ],
+        conclusion: "string",
+      }
+    },
+    "file-dot-env-github": {
+      title: "Pourquoi ne pas pousser le fichier *.env* dans un repo github",
+      category: "Notes",
+      readTime: "8 mins",
+      date: "22 Février 2026",
+      author: "Merveille Tsafack",
+      tags: [''],
+      content: {
+        introduction: "Lors de la création d'une application, il est important d'établir une séparation nette entre *les éléments qui sont les mêmes dans tous les environnements* et *les éléments qui changent dans chaque environnement*. Le premier est votre code. Le second est la configuration de votre environnement.",
+        sections: [
+          {
+            title: "string",
+            content: [""],
+          }
+        ],
+        conclusion: "string",
+      }
+    },
+    "not-only-delete-data": {
+      title: "Pourquoi on ne supprime (presque) jamais les données en génie logiciel ?",
+      category: "Notes",
+      readTime: "8 mins",
+      date: "A venir",
+      author: "Merveille Tsafack",
+      tags: [''],
+      content: {
+        introduction: `DELETE FROM users WHERE id = 5;
+        Vraiment ? \n
+        Dans la réalité des systèmes en production, la requête ressemble beaucoup plus à : \n
+        UPDATE users SET status = 'deleted', deleted_at = NOW() WHERE id = 5;
+        Et ce n’est pas un hasard.
+      `,
+        sections: [
+          {
+            title: "Le filet de sécurité (Erreur humaine)",
+            content: [""],
+          },
+          {
+            title: "L'intégrité référentielle",
+            content: [""],
+          },
+          {
+            title: "L'audit et la conformité",
+            content: [""],
+          },
+        ],
+        conclusion: "string",
+      }
+    },
+    /* "file-dot-env-github": {
+      title: "Pourquoi ne pas pousser le fichier *.env* dans un repo github",
+      category: "Notes",
+      readTime: "8 mins",
+      date: "22 Février 2026",
+      author: "Merveille Tsafack",
+      tags: [''],
+      content: {
+        introduction: 'string',
+        sections: [
+          {
+            title: "string",
+            content: [""],
+          },
+        ],
+        conclusion: "string",
+      }
+    }, */
+    /* "system-design-etudiant": {
       title: "Comprendre le System Design en tant qu'étudiant en ingénierie",
       category: "Architecture",
       readTime: "8 min",
@@ -306,17 +392,36 @@ export function BlogPost() {
         ],
         conclusion: "Chaque projet est une opportunité d'apprentissage. Les erreurs sont normales, l'important est d'en tirer des leçons et de s'améliorer continuellement."
       }
-    }
+    } */
   };
 
   const post = slug ? blogPosts[slug] : null;
-
   if (!post) {
     return (
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Article non trouvé</h1>
           <p className="text-gray-300 mb-8">Cet article n'existe pas encore ou est en cours de rédaction.</p>
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+          >
+            <ArrowLeft size={20} />
+            Retour au blog
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  else if (post.date === 'A venir' || post.date.toLowerCase() === 'a venir') {
+    return (
+      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Article non finalisé</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-gray-300 mb-8">Cet article est en cours de rédaction.</p>
           <Link
             to="/blog"
             className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
@@ -354,12 +459,11 @@ export function BlogPost() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-8 sm:mb-10 md:mb-12"
         >
-          <div className="mb-4 sm:mb-6">
-            <span className={`inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-white text-xs sm:text-sm ${post.category === "Architecture" ? "bg-purple-600" :
-              post.category === "DevOps" ? "bg-blue-600" :
-                post.category === "Développement" ? "bg-green-600" :
-                  "bg-orange-600"
-              }`}>
+          <div className="mb-4 sm:mb-6">            
+            <span
+              className={`px-3 py-1 text-xs rounded-full text-white ${categories.find((c) => c.name === post.category)?.color || "bg-gray-500"
+                }`}
+            >
               {post.category}
             </span>
           </div>

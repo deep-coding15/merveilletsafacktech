@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { GraduationCap, Code, Rocket, Target, TrendingUp, Lightbulb, BookOpen, Laptop, Zap, Award } from "lucide-react";
+import { GraduationCap, Code, Rocket, RadicalIcon, Target, TrendingUp, Lightbulb, BookOpen, Laptop, Zap, Award } from "lucide-react";
 
 export function Journey() {
   const journeySteps = [
@@ -53,22 +53,41 @@ export function Journey() {
     },
     {
       year: "2023",
-      title: "Développement Full-Stack",
+      title: "Refocus en Génie Informatique",
       type: "Formation",
       description: "Apprentissage du développement web complet avec focus sur les bonnes pratiques et l'architecture logicielle. Bases solides en programmation et bases de données.",
       icon: Laptop,
       color: "from-orange-600 to-red-600",
       achievements: [
-        "Maîtrise de Java, PHP, JavaScript",
+        "Premiers projets personnels",
+        "Bonne base aux langages Java, C",
+        "Réseaux et systèmes d'exploitation",
+        "Introduction aux Design patterns et architecture MVC",
+        "Introduction aux Frameworks et aux bonnes pratiques logicielles",
+        /* "Maîtrise de Java, PHP, JavaScript",
         "Frameworks : Spring Boot, Laravel, React, Angular",
         "Bases de données : MySQL, PostgreSQL, MongoDB",
-        "Design patterns et architecture MVC",
         "API RESTful et communication client-serveur",
-        "Responsive design et UX/UI",
+        "Responsive design et UX/UI", */
+        //"Participation à des communautés tech",
       ],
     },
     {
-      year: "2022",
+      year: "2022-2024",
+      title: "Classes préparatoires",
+      type: "Fondations",
+      description: "Je reussis un concours pour aller dans une ecole d'ingenieurs où je me forme en classes préparatoire pour le cycle ingenieur.",
+      icon: RadicalIcon,
+      color: "from-pink-600 to-purple-600",
+      achievements: [
+        "Mathématiques",
+        "Physiques",
+        "Chimie",
+        "Informatique",
+      ],
+    },
+    {
+      year: "2021",
       title: "Début en Génie Informatique",
       type: "Fondations",
       description: "Entrée à l'université en génie informatique. Découverte de la programmation, des algorithmes et des structures de données. Passion pour l'informatique confirmée.",
@@ -78,9 +97,6 @@ export function Journey() {
         "Fondamentaux de la programmation",
         "Structures de données et algorithmes",
         "Architecture des ordinateurs",
-        "Réseaux et systèmes d'exploitation",
-        "Premiers projets personnels",
-        "Participation à des communautés tech",
       ],
     },
   ];

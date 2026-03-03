@@ -19,6 +19,25 @@ export function Projects() {
       ],
       github: "https://github.com/deep-coding15/",
     },
+  ]
+  
+  /* const projects = [
+    {
+      title: "Système de Gestion de Restaurant",
+      subtitle: "Application web full-stack avec architecture avancée",
+      icon: Database,
+      color: "from-purple-600 to-indigo-600",
+      problem: "Gérer les commandes, le personnel, l'inventaire et les finances d'un restaurant de manière centralisée et efficace.",
+      architecture: "Architecture MVC avec Laravel backend, React frontend, base de données relationnelle optimisée.",
+      technologies: ["Laravel", "React", "MySQL", "Tailwind CSS", "JWT Auth"],
+      challenges: [
+        "Conception d'un schéma de base de données complexe avec relations multiples",
+        "Gestion en temps réel des commandes avec websockets",
+        "Système de permissions granulaires pour différents rôles",
+        "Optimisation des requêtes SQL pour les rapports de ventes",
+      ],
+      github: "https://github.com/deep-coding15/",
+    },
     {
       title: "Plateforme de Réservation Cinéma & Événements",
       subtitle: "Système de réservation en ligne avec paiement intégré",
@@ -83,7 +102,7 @@ export function Projects() {
       ],
       github: "https://github.com/deep-coding15/",
     },
-  ];
+  ]; */
 
   const container = {
     hidden: { opacity: 0 },
