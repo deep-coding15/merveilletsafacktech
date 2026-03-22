@@ -15,7 +15,7 @@ export function Blog() {
     },
     {
       title: "Pourquoi ne pas pousser le fichier *.env* dans un repo github",
-      description: "Mes apprentissages sur la conception de systèmes scalables, les patterns d'architecture, et comment aborder le system design sans expérience professionnelle.",
+      description: "Le fichier *.env* siège de tous les secrets, les mots de passe ainsi que les clés api de l'application pour un environnement dédié.",
       category: "Notes",
       readTime: "8 min",
       date: "20 Fev 2026",
@@ -31,7 +31,7 @@ export function Blog() {
       `,
       category: "Architecture Logicielle",
       readTime: "8 min",
-      date: "A venir",
+      date: "03 Mars 2026", //A venir
       slug: "not-only-delete-data",
     },
     /* {
