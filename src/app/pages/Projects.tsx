@@ -4,6 +4,47 @@ import { ExternalLink, Github, Database, Smartphone, Globe, Zap, Cpu } from "luc
 export function Projects() {
   const projects = [
     {
+      title: "Système de Stock pour un commerce de proximité (en cours)",
+      subtitle: "Application web et desktop full-stack avec gestion avancée de flux de produits et architecture de base de données avancée",
+      icon: Globe,
+      color: "from-purple-600 to-indigo-600",
+      problem: "Gérer les stocks, les produits, les rotations de produits. Assurer une intgrité de données par produit, lot et stock produit.",
+      architecture: "Layered Architecture Spring Boot, API, base de données relationnelle optimisée.",
+      technologies: ["Spring Boot", "React", "Postman", "MySQL", "Tailwind CSS", "BCrypt", "GitHub Actions"],
+      challenges: [
+        "Conception d'un schéma de base de données complexe avec relations multiples entre produit, vente et stocks",
+        "Gestion en temps réel des votes avec polling server",
+        "Système de permissions granulaires pour différents rôles",
+        "Optimisation des requêtes SQL pour les statistiques de ventes et de stock",
+      ],
+      github: {
+        backend: "https://github.com/deep-coding15/GesStockApi",
+        frontend: "https://github.com/deep-coding15/GesStock"
+      },
+    },
+    {
+      title: "Système de Gestion de vote pour l'ASEET",
+      subtitle: "Application web full-stack avec gestion avancée de données personnelles et architecture de base de données avancée",
+      icon: Database,
+      color: "from-purple-600 to-indigo-600",
+      problem: "Gérer les participants, les candidats, et leurs votes. Assurer un vote unique par candidat et une gestion propre de la base de donnée.",
+      architecture: "Architecture MVC PHP, API, base de données relationnelle optimisée.",
+      technologies: ["HTML", "JAVASCRIPT", "PHP", "MySQL", "Tailwind CSS", "BCrypt", "AJAX"],
+      challenges: [
+        "Conception d'un schéma de base de données complexe avec relations multiples",
+        "Gestion en temps réel des votes avec ajax",
+        "Système de permissions granulaires pour différents rôles",
+        "Optimisation des requêtes SQL pour les statistiques de vote",
+      ],
+      github: {
+        fullstack: "https://github.com/deep-coding15/",
+      },
+      demo: "https://bureau-vote-aseet-be.great-site.net",
+    },
+  ]
+
+  /* const projects = [
+    {
       title: "Système de Gestion de Restaurant",
       subtitle: "Application web full-stack avec architecture avancée",
       icon: Database,
@@ -83,7 +124,7 @@ export function Projects() {
       ],
       github: "https://github.com/deep-coding15/",
     },
-  ];
+  ]; */
 
   const container = {
     hidden: { opacity: 0 },
@@ -114,7 +155,7 @@ export function Projects() {
             Mes Projets
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-            Une sélection de projets qui démontrent mes compétences en développement, 
+            Une sélection de projets qui démontrent mes compétences en développement,
             architecture système, DevOps et infrastructure.
           </p>
         </motion.div>
@@ -195,20 +236,49 @@ export function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4">
+                <div className="grid gap-6 sm:gap-6 md:gap-8 sm:grid-cols-1 lg:grid-cols-2">
+                  {project.github.frontend &&
+                    <a
+                      href={project.github.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                    >
+                      <Github size={20} />
+                      Voir sur GitHub (Frontend)
+                    </a>
+                  }
+                  {project.github.backend &&
+                    <a
+                      href={project.github.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                    >
+                      <Github size={20} />
+                      Voir sur GitHub (Backend)
+                    </a>
+                  }
+                  {project.github.fullstack &&
+                    <a
+                      href={project.github.fullstack}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                    >
+                      <Github size={20} />
+                      Voir sur GitHub (FullStack)
+                    </a>
+                  }
                   <a
-                    href={project.github}
+                    href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800/50 text-white rounded-lg hover:bg-gray-700/50 transition-colors border border-purple-500/30"
                   >
-                    <Github size={20} />
-                    Voir sur GitHub
+                    <Zap size={20} />
+                    Démo
                   </a>
-                  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800/50 text-white rounded-lg hover:bg-gray-700/50 transition-colors border border-purple-500/30">
-                    <ExternalLink size={20} />
-                    Démo (bientôt)
-                  </button>
                 </div>
               </div>
             </motion.div>
@@ -227,7 +297,7 @@ export function Projects() {
             D'autres projets en développement
           </h2>
           <p className="text-gray-300 text-lg mb-6">
-            Je travaille constamment sur de nouveaux projets pour approfondir mes compétences 
+            Je travaille constamment sur de nouveaux projets pour approfondir mes compétences
             et explorer de nouvelles technologies. Suivez mon GitHub pour voir mes derniers travaux.
           </p>
           <a

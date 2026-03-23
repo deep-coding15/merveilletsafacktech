@@ -47,10 +47,10 @@ export function Home() {
             className="mb-6 sm:mb-8"
           >
             <p className="text-lg sm:text-xl md:text-2xl text-purple-300 font-semibold mb-2">
-              Étudiant en Génie Informatique à Tétouan
+              Étudiant en 4e année Génie Informatique à l'ENSA de Tétouan
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300">
-              Architecture d'Infrastructure • Systèmes Distribués • QA & Testing
+              Architecture Logicielle • QA & Testing
             </p>
           </motion.div>
 
@@ -62,8 +62,8 @@ export function Home() {
             className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2"
           >
             Passionné par la conception d'infrastructures robustes et scalables,
-            l'architecture de systèmes distribués et l'assurance qualité.
-            Je construis des solutions techniques fiables avec Docker, Kubernetes, CI/CD et tests automatisés.
+            l'architecture de systèmes fiables et l'assurance qualité.
+            Je construis des solutions techniques fiables proche du monde industriel avec Docker, Postman, CI/CD et tests automatisés.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -100,7 +100,11 @@ export function Home() {
             </div>
             <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">15+</div>
-              <div className="text-xs sm:text-sm md:text-base text-gray-300">Projets réalisés</div>
+              <div className="text-xs sm:text-sm md:text-base text-gray-300">Projets réalisés(Academiques & Professionnels)</div>
+            </div>
+            <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">2+</div>
+              <div className="text-xs sm:text-sm md:text-base text-gray-300">Clients satisfaits</div>
             </div>
             <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">10+</div>

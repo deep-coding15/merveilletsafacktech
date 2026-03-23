@@ -180,7 +180,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Localisation</h3>
-                  <p className="text-purple-300 text-sm sm:text-base">Maroc</p>
+                  <p className="text-purple-300 text-sm sm:text-base">Tétouan, Maroc</p>
                 </div>
               </div>
             </div>
