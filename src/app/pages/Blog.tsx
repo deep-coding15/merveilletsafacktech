@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export function Blog() {
   const upcomingPosts = [
-    {
+    /*{
       title: "Comprendre le System Design en tant qu'étudiant en ingénierie",
       description: "Mes apprentissages sur la conception de systèmes scalables, les patterns d'architecture, et comment aborder le system design sans expérience professionnelle.",
       category: "Architecture",
@@ -51,7 +51,7 @@ export function Blog() {
       readTime: "13 min",
       date: "À venir",
       slug: "",
-    },
+    },*/
     {
       title: "Optimisation de bases de données : de la théorie à la pratique",
       description: "Techniques d'indexation, requêtes optimisées, partitioning, et monitoring de performance dans des projets réels.",

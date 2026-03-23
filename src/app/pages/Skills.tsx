@@ -92,6 +92,7 @@ export function Skills() {
     show: { opacity: 1, y: 0 },
   };
 
+  // @ts-ignore
   return (
     <div className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -159,20 +160,20 @@ export function Skills() {
             d'expérimenter et de m'améliorer. Chaque projet est une opportunité de progresser.
           </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-            <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
+            {/* <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
               Kubernetes (en cours)
             </span>
             <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
-              Microservices
+              Microservices (en cours)
             </span>
             <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
-              System Design
+              System Design (en cours)
+            </span> */}
+            <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
+              AWS/Azure (en cours)
             </span>
             <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
-              AWS/Azure
-            </span>
-            <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-600/30 border border-purple-500/40 rounded-full text-purple-200 text-xs sm:text-sm">
-              Architecture distribuée
+              Architecture distribuée (en cours)
             </span>
           </div>
         </motion.div>

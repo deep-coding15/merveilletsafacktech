@@ -3,7 +3,7 @@ import { GraduationCap, Code, Rocket, Target, TrendingUp, Lightbulb, BookOpen, L
 
 export function Journey() {
   const journeySteps = [
-    {
+    /*{
       year: "2026",
       title: "Spécialisation Infrastructure & QA",
       type: "Approfondissement",
@@ -34,9 +34,9 @@ export function Journey() {
         "Implémentation de tests unitaires et d'intégration",
         "Configuration Nginx pour load balancing et SSL",
       ],
-    },
+    },*/
     {
-      year: "2024",
+      year: "2026",
       title: "Formation DevOps & Tests",
       type: "Apprentissage",
       description: "Introduction au DevOps, Docker, CI/CD et aux pratiques de tests logiciels. Découverte de l'importance de l'infrastructure et de la qualité.",
@@ -46,13 +46,13 @@ export function Journey() {
         "Maîtrise de Docker et conteneurisation",
         "Premiers pipelines CI/CD avec GitHub Actions",
         "Apprentissage des tests : TDD, tests unitaires, intégration",
-        "Concepts de système design et architecture distribuée",
+        //"Concepts de système design et architecture distribuée",
         "Configuration de serveurs et reverse proxy",
         "Versioning et collaboration avec Git avancé",
       ],
     },
     {
-      year: "2023",
+      year: "2025",
       title: "Développement Full-Stack",
       type: "Formation",
       description: "Apprentissage du développement web complet avec focus sur les bonnes pratiques et l'architecture logicielle. Bases solides en programmation et bases de données.",
@@ -68,7 +68,7 @@ export function Journey() {
       ],
     },
     {
-      year: "2022",
+      year: "2024",
       title: "Début en Génie Informatique",
       type: "Fondations",
       description: "Entrée à l'université en génie informatique. Découverte de la programmation, des algorithmes et des structures de données. Passion pour l'informatique confirmée.",
