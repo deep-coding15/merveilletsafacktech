@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Github, Database, Globe, Zap, Users, ShoppingBag, Server } from "lucide-react";
+import { Github, Database, Globe, Zap, Users, ShoppingBag, Server, GitBranch } from "lucide-react";
 
 export function Projects() {
   const projects = [
@@ -126,6 +126,25 @@ export function Projects() {
         fullstack: "https://github.com/deep-coding15/Systeme_de_vote_asset",
       },
       demo: "https://bureau-vote-aseet-be.great-site.net",
+    },
+    {
+      title: "Soko VCS — Système de Contrôle de Version",
+      subtitle: "Implémentation from scratch d'un VCS type Git en Python, avec stockage d'objets SHA-1, compression zlib et CLI argparse",
+      icon: GitBranch,
+      color: "from-sky-600 to-indigo-600",
+      problem:
+        "Comprendre les mécanismes internes de Git en implémentant from scratch un système de contrôle de version : stockage d'objets (blobs, commits, trees, tags), hachage SHA-1, compression zlib et résolution de références.",
+      architecture:
+        "CLI Python via argparse avec dispatch de sous-commandes (match/case), entités orientées objet GitObject / GitBlob / SokoRepository, utilitaires filesystem (repo_path, repo_file, repo_dir, repo_find récursif). Lecture/écriture d'objets compressés zlib avec en-têtes Git, stockage par hash SHA-1 avec structure dossiers 2 + 38 caractères.",
+      technologies: ["Python 3.10+", "argparse", "zlib", "hashlib / SHA-1", "OOP", "CLI"],
+      challenges: [
+        "Reproduction fidèle du format d'objet Git : en-tête (type + taille), séparateur null, contenu, compression zlib",
+        "Résolution du root repository en remontant récursivement l'arborescence parent (repo_find)",
+        "Portabilité Windows / Linux : import conditionnel des modules grp et pwd absents sur Windows",
+        "Implémentation de cat-file et hash-object : sérialisation / désérialisation d'objets binaires et calcul du SHA-1",
+      ],
+      github: {},
+      demo: null,
     },
   ];
 
