@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code, Laptop, Server, Cpu, Database, Terminal } from "lucide-react";
+import { Code, Laptop, Server, Cpu, Database, Terminal, Zap } from "lucide-react";
 import { competencesEnCours } from "../competencesEnCours";
 
 export function Skills() {
@@ -75,7 +75,15 @@ export function Skills() {
         { name: "Algorithmes", description: "Tri, recherche, parcours, complexité algorithmique" },
         { name: "Design patterns", description: "MVC, Repository, Factory, Observer, Strategy" },
         { name: "Architecture logicielle", description: "Clean architecture, SOLID, separation des concerns, Layered architecture, design patterns" },
-        { name: "Tests & Automatisation", description: "Tests unitaires, tests de fonctionnalités, TDD basics, Postman, GitHub Actions, Apache JMeter" }, //tests d'intégration,
+      ],
+    },
+    {
+      title: "IA agentique & qualité logicielle",
+      icon: Zap,
+      color: "from-violet-600 to-purple-600",
+      skills: [
+        { name: "IA agentique", description: "Compétence en cours de développement : agents IA et automatisation de tâches" },
+        { name: "Automatisation des tests", description: "Tests unitaires, fonctionnels, deperformance, end to end, bases du TDD, Postman, Selenium, Playwright Apache JMeter et intégration aux workflows GitHub Actions" },
       ],
     },
   ];
@@ -110,8 +118,7 @@ export function Skills() {
             Compétences & Stack Technique
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-            Une base solide en developpement full-stack(web, mobile, desktop). Je suis en train d'apprendre l'architecture systeme, le DevOps.
-            Je suis en constante evolution a travers l'apprentissage, la pratique et la curiosite.
+            Développement full-stack, architecture système, DevOps et assurance qualité. Je développe actuellement mes compétences en IA agentique et en automatisation des tests, dans une démarche d'apprentissage continu.
           </p>
         </motion.div>
 

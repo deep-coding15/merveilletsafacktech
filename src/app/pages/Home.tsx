@@ -52,7 +52,7 @@ export function Home() {
                 Étudiant en 4e année Génie Informatique • ENSA de Tétouan
               </p>
               <p className="text-sm sm:text-base text-gray-400">
-                Software Engineer • Architecture • QA & Testing
+                Software Engineer • IA agentique • Architecture Logicielle • QA & Test Automation
               </p>
             </motion.div>
           </motion.div>
@@ -68,9 +68,11 @@ export function Home() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2 text-center"
         >
-          Passionné par la conception d'infrastructures robustes et scalables,
-          l'architecture de systèmes fiables et l'assurance qualité.
-          Je construis des solutions techniques fiables proche du monde industriel avec Docker, Postman, CI/CD et tests automatisés.
+          Passionné par l'architecture de systèmes fiables, l'assurance qualité et
+          l'IA agentique. Je développe actuellement mes compétences en conception
+          d'agents IA et en automatisation des tests. Je construis des systèmes informatiques robustes et évolutifs, tout en explorant les dernières avancées en IA pour la fiabilité logicielle.
+          
+          Je suis toujours à la recherche de nouvelles opportunités pour apprendre et contribuer à des projets innovants.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -157,4 +159,3 @@ export function Home() {
     </div>
   );
 }
-
