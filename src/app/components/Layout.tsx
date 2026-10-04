@@ -11,6 +11,7 @@ export function Layout() {
 
   const navLinks = [
     { path: "/", label: "Accueil" },
+    { path: "/avatar", label: "Avatar" },
     { path: "/skills", label: "Compétences" },
     { path: "/projects", label: "Projets" },
     { path: "/blog", label: "Blog" },

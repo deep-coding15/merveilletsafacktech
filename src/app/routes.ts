@@ -7,6 +7,7 @@ import { Blog } from "./pages/Blog";
 import { BlogPost } from "./pages/BlogPost";
 import { Journey } from "./pages/Journey";
 import { Contact } from "./pages/Contact";
+import AvatarChat from "./pages/Avatar";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       { path: "blog/:slug", Component: BlogPost },
       { path: "journey", Component: Journey },
       { path: "contact", Component: Contact },
+      { path: "avatar", Component: AvatarChat },
     ],
   },
 ]);
