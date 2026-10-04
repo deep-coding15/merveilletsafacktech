@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { GraduationCap, Code, Rocket, RadicalIcon, Target, TrendingUp, Lightbulb, BookOpen, Laptop, Zap, Award } from "lucide-react";
+import { GraduationCap, Code, Rocket, RadicalIcon, Target, TrendingUp, Lightbulb, BookOpen, Laptop, Zap, Award, Users } from "lucide-react";
 
 export function Journey() {
   const journeySteps = [
@@ -36,19 +36,17 @@ export function Journey() {
       ],
     },*/
     {
-      year: "2026",
-      title: "Formation DevOps & Tests",
-      type: "Apprentissage",
-      description: "Introduction au DevOps, Docker, CI/CD et aux pratiques de tests logiciels. Découverte de l'importance de l'infrastructure et de la qualité.",
+      year: "2026 – 2027",
+      title: "Double diplôme : Génie Informatique & M2 QUASSI",
+      type: "Formation",
+      description: "Cycle ingénieur en Génie Informatique à l'ENSA de Tétouan et Master 2 QUASSI (Qualité et Sûreté de fonctionnement des Systèmes Informatiques) à Polytech Angers. Diplômes attendus en juin 2027.",
       icon: BookOpen,
       color: "from-green-600 to-emerald-600",
       achievements: [
-        "Maîtrise de Docker et conteneurisation",
-        "Premiers pipelines CI/CD avec GitHub Actions",
-        "Apprentissage des tests : TDD, tests unitaires, intégration",
-        //"Concepts de système design et architecture distribuée",
-        "Configuration de serveurs et reverse proxy",
-        "Versioning et collaboration avec Git avancé",
+        "Spécialisation en qualité logicielle, test et validation",
+        "Automatisation QA, sûreté de fonctionnement (RAMS, AMDEC) et management de projet",
+        "Référentiels qualité, sûreté et sécurité étudiés dans le cadre du M2",
+        "Projet tutoré KEREVAL : agent IA pour l'analyse de spécifications OpenAPI et l'automatisation de tests d'API",
       ],
     },
     {
@@ -106,19 +104,40 @@ export function Journey() {
 
   const futureGoals = [
     {
-      title: "Architecte d'Infrastructure Cloud",
-      description: "Concevoir et gérer des infrastructures cloud scalables, résilientes et sécurisées avec Kubernetes, Terraform et les meilleures pratiques DevOps.",
+      title: "IA agentique appliquée au test",
+      description: "Explorer les workflows multi-agents et le RAG pour analyser des spécifications et assister la génération de cas de test.",
       icon: Zap,
     },
     {
-      title: "Expert QA & Testing",
-      description: "Maîtriser les stratégies de tests automatisés, l'assurance qualité continue et les frameworks de tests pour garantir la fiabilité des systèmes.",
+      title: "Test & validation logicielle",
+      description: "Concevoir des stratégies de test traçables et automatiser la validation fonctionnelle et non-régressive.",
       icon: Target,
     },
     {
-      title: "Spécialiste Systèmes Distribués",
-      description: "Architecturer des systèmes distribués performants avec microservices, message queues, caching distribué et patterns de résilience.",
+      title: "Qualité & sûreté de fonctionnement",
+      description: "Contribuer à la fiabilité de logiciels exigeants par l'assurance qualité, l'analyse des risques et les méthodes RAMS.",
       icon: Award,
+    },
+  ];
+
+  const engagements = [
+    {
+      title: "Étudiante référente — Crous Belle Beille",
+      period: "Depuis septembre 2026",
+      description: "Accueil et accompagnement des résidents, animation du lien social et appui aux démarches du quotidien.",
+      icon: Users,
+    },
+    {
+      title: "Trésorière — EIS Club, ENSA de Tétouan",
+      period: "Février 2025 – septembre 2026",
+      description: "Gestion budgétaire et suivi financier du club.",
+      icon: Award,
+    },
+    {
+      title: "2e place — Hackathon Codage & IA",
+      period: "AEBM × ASEGUIM, mai 2026",
+      description: "Distinction obtenue avec The Beginning, une plateforme d'orientation professionnelle avec IA.",
+      icon: Zap,
     },
   ];
 
@@ -136,8 +155,8 @@ export function Journey() {
             Mon Parcours d'Ingénierie
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-            Une chronologie de mon évolution en tant qu'étudiant en génie informatique, 
-            mes apprentissages passés, mes focus actuels, et ma vision pour l'avenir.
+            Mon double cursus en Génie Informatique et en qualité logicielle, test,
+            validation et sûreté de fonctionnement.
           </p>
         </motion.div>
 
@@ -172,7 +191,7 @@ export function Journey() {
                     <div>
                       <div className="flex items-center gap-3 mb-1">
                         <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                        {item.type === "Approfondissement" && (
+                        {(item.type === "Approfondissement" || item.year === "2026 – 2027") && (
                           <span className="px-3 py-1 bg-green-600/20 border border-green-500/30 rounded-full text-green-300 text-xs">
                             En cours
                           </span>
@@ -215,7 +234,7 @@ export function Journey() {
               Vision & Objectifs futurs
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Ma spécialisation : Architecture d'Infrastructure, Systèmes Distribués & Assurance Qualité
+              Ma spécialisation : IA agentique pour le test, validation logicielle & sûreté de fonctionnement
             </p>
           </div>
 
@@ -240,12 +259,29 @@ export function Journey() {
 
           <div className="text-center">
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Mon objectif est de devenir un expert en conception d'infrastructures robustes, 
-              en architecture de systèmes distribués scalables, et en assurance qualité à tous les niveaux. 
-              Je veux garantir que les systèmes que je conçois sont fiables, performants et testés rigoureusement.
+              Je recherche un stage de fin d'études de 6 mois à partir de février 2027
+              pour concevoir des stratégies de test, automatiser la validation et
+              contribuer à la fiabilité de logiciels exigeants.
             </p>
           </div>
         </motion.div>
+
+        {/* Engagement & distinctions */}
+        <section className="mt-12 sm:mt-16" aria-labelledby="engagements-title">
+          <h2 id="engagements-title" className="text-2xl sm:text-3xl font-bold text-white text-center mb-6">
+            Engagement & distinctions
+          </h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {engagements.map((engagement) => (
+              <article key={engagement.title} className="bg-gray-900/40 border border-purple-500/20 rounded-xl p-6">
+                <engagement.icon className="text-purple-400 mb-4" size={28} aria-hidden="true" />
+                <h3 className="text-lg font-semibold text-white mb-1">{engagement.title}</h3>
+                <p className="text-sm text-purple-300 mb-3">{engagement.period}</p>
+                <p className="text-gray-300">{engagement.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {/* Closing Message */}
         <motion.div

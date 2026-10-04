@@ -101,8 +101,9 @@ export function Contact() {
             Contactez-moi
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
-            Intéressé par mon profil ? Une question sur mes projets ? 
-            N'hésitez pas à me contacter, je serai ravi d'échanger avec vous.
+            À la recherche d'un stage de fin d'études de 6 mois à partir de février 2027
+            en IA agentique appliquée aux systèmes informatiques, test automatisé
+            ou sûreté de fonctionnement logiciel ? Échangeons.
           </p>
         </motion.div>
 
@@ -175,12 +176,29 @@ export function Contact() {
 
             <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-5 sm:p-6 hover:border-purple-500/40 transition-all">
               <div className="flex items-start gap-4">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-600 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone size={22} className="text-white sm:w-6 sm:h-6" />
+                </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Téléphone</h3>
+                  <a
+                    href="tel:+33759074924"
+                    className="text-purple-300 hover:text-purple-200 transition-colors text-sm sm:text-base"
+                  >
+                    +33 7 59 07 49 24
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-5 sm:p-6 hover:border-purple-500/40 transition-all">
+              <div className="flex items-start gap-4">
                 <div className="w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin size={22} className="text-white sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">Localisation</h3>
-                  <p className="text-purple-300 text-sm sm:text-base">Tétouan, Maroc</p>
+                  <p className="text-purple-300 text-sm sm:text-base">Angers, France</p>
                 </div>
               </div>
             </div>

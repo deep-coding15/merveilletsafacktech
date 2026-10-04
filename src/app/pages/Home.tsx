@@ -39,7 +39,7 @@ export function Home() {
               className="flex-1 text-center"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">
-              Lydivine Merveille Magne Tsafack
+              Lydivine Merveille MAGNE TSAFACK
             </h1>
 
             <motion.div
@@ -49,10 +49,10 @@ export function Home() {
               className="space-y-1"
             >
               <p className="text-lg sm:text-xl text-purple-300 font-semibold">
-                Étudiant en 4e année Génie Informatique • ENSA de Tétouan
+                Élève-ingénieure en double diplôme • M2 QUASSI, Polytech Angers
               </p>
               <p className="text-sm sm:text-base text-gray-400">
-                Software Engineer • IA agentique • Architecture Logicielle • QA & Test Automation
+                IA agentique appliquée au test • Validation logicielle • Sûreté de fonctionnement
               </p>
             </motion.div>
           </motion.div>
@@ -68,11 +68,12 @@ export function Home() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2 text-center"
         >
-          Passionné par l'architecture de systèmes fiables, l'assurance qualité et
-          l'IA agentique. Je développe actuellement mes compétences en conception
-          d'agents IA et en automatisation des tests. Je construis des systèmes informatiques robustes et évolutifs, tout en explorant les dernières avancées en IA pour la fiabilité logicielle.
-          
-          Je suis toujours à la recherche de nouvelles opportunités pour apprendre et contribuer à des projets innovants.
+          En double diplôme de Génie Informatique à l'ENSA de Tétouan et de M2
+          QUASSI à Polytech Angers, je combine développement full-stack, tests
+          automatisés et culture de la sûreté de fonctionnement. Je recherche un
+          stage de fin d'études de 6 mois à partir de février 2027 pour contribuer
+          à la validation et à la fiabilité de logiciels exigeants, notamment avec
+          l'IA agentique.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -104,24 +105,24 @@ export function Home() {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mt-8"
         >
           <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">4+</div>
-            <div className="text-xs sm:text-sm md:text-base text-gray-300">Années d'études</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">2</div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300">Diplômes préparés en double cursus</div>
           </div>
           <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">15+</div>
-            <div className="text-xs sm:text-sm md:text-base text-gray-300">Projets réalisés(Academiques & Professionnels)</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">6 mois</div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300">Durée du stage recherché</div>
           </div>
           <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">2+</div>
-            <div className="text-xs sm:text-sm md:text-base text-gray-300">Clients satisfaits</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">Fév. 2027</div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300">Disponibilité pour le stage</div>
           </div>
           <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">10+</div>
-            <div className="text-xs sm:text-sm md:text-base text-gray-300">Technologies</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">B2</div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300">Anglais</div>
           </div>
           <div className="bg-gray-900/40 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4 sm:p-6 hover:border-purple-500/40 transition-all text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">∞</div>
-            <div className="text-xs sm:text-sm md:text-base text-gray-300">Passion & curiosité</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-1 sm:mb-2">IA + QA</div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300">Axes de spécialisation</div>
           </div>
         </motion.div>
 

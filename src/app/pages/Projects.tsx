@@ -4,14 +4,33 @@ import { Github, Database, Globe, Zap, Users, ShoppingBag, Server, GitBranch } f
 export function Projects() {
   const projects = [
     {
+      title: "Système agentique de test d'API — Projet tutoré KEREVAL",
+      subtitle: "Projet en cours (septembre 2026 – février 2027) • équipe de 2 • 20 jours",
+      icon: Zap,
+      color: "from-violet-600 to-purple-600",
+      problem:
+        "Évaluer la qualité de spécifications OpenAPI et fiabiliser la validation d'API grâce à un agent capable d'automatiser les tests et de produire un rapport d'anomalies.",
+      architecture:
+        "Projet mené sur l'ensemble du cycle : état de l'art, recueil du besoin, spécification, conception, développement et tests. Exploration de workflows multi-agents LLM pour assister l'analyse des spécifications et la génération de tests.",
+      technologies: ["IA agentique", "LLM", "OpenAPI", "Tests d'API REST", "Automatisation QA"],
+      challenges: [
+        "Analyser la qualité et la complétude de spécifications OpenAPI",
+        "Automatiser l'exécution des tests d'API",
+        "Produire un rapport d'anomalies exploitable",
+        "Concevoir et valider une solution en équipe de deux dans le cadre du projet tutoré KEREVAL",
+      ],
+      github: {},
+      demo: null,
+    },
+    {
       title: "HireHub — Plateforme de Recrutement",
-      subtitle: "ATS complet en microservices avec pipeline recruteur, candidatures PDF, entretiens et audit asynchrone",
+      subtitle: "Plateforme de recrutement en microservices avec observabilité de bout en bout",
       icon: Users,
       color: "from-blue-600 to-cyan-600",
       problem:
         "Centraliser tout le cycle de recrutement : publication d'offres, dépôt de CV PDF, pipeline recruteur multi-étapes, planification d'entretiens et notifications email, avec traçabilité complète des actions via un service d'audit dédié.",
       architecture:
-        "Monorepo Maven multi-modules, 9 microservices Spring Boot 3.2 (Eureka Discovery, API Gateway, auth-service, candidature-service, entretien-service, offre-service, email-service, event-service, verification-service). PostgreSQL isolée par service, RabbitMQ pour la messagerie asynchrone inter-services, stack d'observabilité Prometheus + Grafana + Loki + Promtail.",
+        "Monorepo Maven multi-modules avec 8 microservices Spring Boot, Eureka, API Gateway, RabbitMQ et JWT. Bases PostgreSQL isolées par service et observabilité Prometheus, Grafana, Loki et Promtail.",
       technologies: [
         "Spring Boot 3.2",
         "Spring Cloud",
@@ -25,10 +44,10 @@ export function Projects() {
         "Prometheus",
       ],
       challenges: [
-        "Orchestration de 9 microservices avec dépendances de démarrage (health checks Docker)",
+        "Orchestration de 8 microservices avec dépendances de démarrage (health checks Docker)",
         "Communication asynchrone via RabbitMQ pour l'envoi d'emails et l'audit sans couplage fort",
         "Isolation des bases de données par service avec schémas indépendants",
-        "Stack d'observabilité complète : métriques Prometheus, logs centralisés Loki, dashboards Grafana",
+        "Observabilité Prometheus, Loki et Grafana avec identifiants de corrélation pour tracer les incidents de bout en bout",
       ],
       github: {
         fullstack: "https://github.com/deep-coding15/HireHub",
@@ -50,19 +69,56 @@ export function Projects() {
         "Intégration d'un modèle IA pour l'évaluation sémantique des réponses",
         "Synchronisation de l'état de l'entretien entre recruteur et candidat",
         "Déploiement sur domaine personnalisé avec HTTPS et gestion des sessions",
+        "2e place au Hackathon Codage & IA organisé par AEBM × ASEGUIM à Tétouan (mai 2026)",
       ],
       github: {},
       demo: "https://thebeginning.merveilletsafack.dev",
     },
     {
+      title: "NutriScan — Classification nutritionnelle",
+      subtitle: "Classification du Nutri-Score avec XGBoost et API de prédiction",
+      icon: Database,
+      color: "from-lime-600 to-green-600",
+      problem:
+        "Classer les produits alimentaires selon leur Nutri-Score à l'aide d'un modèle de machine learning exposé dans une application utilisable.",
+      architecture:
+        "Modèle XGBoost de classification binaire exposé par une API FastAPI, avec une interface Streamlit. Application conteneurisée avec Docker.",
+      technologies: ["Python", "XGBoost", "FastAPI", "Streamlit", "Docker"],
+      challenges: [
+        "Entraîner un modèle de classification binaire",
+        "Exposer les prédictions au travers d'une API FastAPI",
+        "Conteneuriser l'application avec Docker",
+      ],
+      github: {},
+      demo: null,
+    },
+    {
+      title: "Administration Windows Server 2022 — TechNord SARL",
+      subtitle: "Administration d'un domaine Windows et automatisation des tâches système",
+      icon: Server,
+      color: "from-blue-700 to-indigo-700",
+      problem:
+        "Mettre en place et administrer l'environnement de domaine de TechNord SARL avec les services Windows Server.",
+      architecture:
+        "Administration Windows Server 2022 avec Active Directory Domain Services (AD DS), stratégies de groupe (GPO) et IIS.",
+      technologies: ["Windows Server 2022", "Active Directory", "GPO", "IIS", "PowerShell"],
+      challenges: [
+        "Administrer les comptes et ressources dans un domaine Active Directory",
+        "Appliquer des stratégies de groupe adaptées avec les GPO",
+        "Automatiser des tâches d'administration avec PowerShell",
+      ],
+      github: {},
+      demo: null,
+    },
+    {
       title: "Ges'Stock — Gestion de Stock SaaS",
-      subtitle: "Application SaaS full-stack avec pipeline CI/CD complet et déploiement automatisé sur AWS EC2",
+      subtitle: "SaaS de gestion de stock pour commerces de proximité avec tests et déploiement continu",
       icon: Server,
       color: "from-emerald-600 to-teal-600",
       problem:
-        "Fournir aux commerces de proximité un outil SaaS de gestion de stocks, produits et ventes, avec tableau de bord analytique, gestion des rôles et déploiement continu sans interruption de service.",
+        "Développer un système de gestion de stock destiné aux commerces de proximité, avec authentification JWT et validation des endpoints critiques.",
       architecture:
-        "Backend Layered Architecture Spring Boot (API RESTful, Dockerfile multi-stage Maven → JDK Alpine), frontend React + MUI + Recharts + Tailwind. Pipeline CI/CD : GitHub Actions (CI : mvn clean verify) → Docker Hub → CD auto-déclenché sur EC2 AWS (self-hosted runner). Jenkinsfile alternatif inclus.",
+        "Application full-stack Spring Boot et React.js. Pipeline CI/CD Jenkins vers un VPS, avec plans de test structurés autour des endpoints critiques.",
       technologies: [
         "Spring Boot",
         "React",
@@ -76,10 +132,10 @@ export function Projects() {
         "Recharts",
       ],
       challenges: [
-        "Pipeline CI/CD bout en bout : tests automatisés → build Docker → push Hub → déploiement EC2",
-        "Dockerfile multi-stage pour réduire la taille de l'image de production",
-        "Self-hosted runner GitHub Actions sur EC2 pour le déploiement sans downtime",
-        "Conception d'un schéma de base de données avec relations multiples (produit, lot, stock, vente)",
+        "Structurer les plans de test selon les endpoints critiques de l'API",
+        "Mettre en place un pipeline Jenkins de déploiement vers un VPS",
+        "Sécuriser l'accès à l'API avec une authentification JWT",
+        "Concevoir la gestion des stocks, produits et ventes pour des commerces de proximité",
       ],
       github: {
         backend: "https://github.com/deep-coding15/GesStockApi",
@@ -177,8 +233,8 @@ export function Projects() {
             Mes Projets
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-            Une sélection de projets qui démontrent mes compétences en développement,
-            architecture système, DevOps et infrastructure.
+            Projets en développement full-stack, IA appliquée, test automatisé
+            et fiabilité logicielle, dont un projet tutoré en cours avec KEREVAL.
           </p>
         </motion.div>
 
