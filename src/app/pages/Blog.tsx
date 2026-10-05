@@ -15,34 +15,36 @@ export function Blog() {
 
   const upcomingPosts: UpcomingPost[] = [
     {
-      title: "Mon premier pipeline CI CD avec Github Actions et AWS EC2",
-      description: "Mes apprentissages sur la conception de systèmes scalables, les patterns d'architecture, et comment aborder le system design sans expérience professionnelle.",
+      title: "Mettre en place un pipeline CI/CD avec GitHub Actions et AWS EC2",
+      description: "Les étapes pour automatiser les tests et le déploiement vers EC2, protéger les secrets et prévoir un retour arrière.",
       category: "DevOps",
-      readTime: "8 min",
-      date: "A venir", //"19 Fev 2026",
+      readTime: "9 min",
+      date: "5 fevrier 2026",
       slug: "premier-ci-cd-pipeline",
     },
     {
       title: "Pourquoi ne pas pousser le fichier *.env* dans un repo github",
-      description: "Le fichier *.env* siège de tous les secrets, les mots de passe ainsi que les clés api de l'application pour un environnement dédié.",
+      description: "Pourquoi garder les secrets hors de Git, documenter les variables avec un .env.example et réagir correctement en cas d'exposition.",
       category: "Notes",
-      readTime: "8 min",
-      date: "A venir", //"20 Fev 2026",
+      readTime: "7 min",
+      date: "7 Mars 2026",
       slug: "file-dot-env-github",
     },
     {
       title: "Pourquoi on ne supprime (presque) jamais les données en génie logiciel ?",
-      description: [
-        "DELETE FROM users WHERE id = 5;",
-        "Vraiment ?",
-        "Dans la réalité des systèmes en production, la requête ressemble beaucoup plus à :",
-        "UPDATE users SET status = 'deleted' AND deleted_at = NOW() WHERE id = 5;",
-        "Et ce n'est pas un hasard.",
-      ].join("\n"),
+      description: "Suppression logique ou physique : comprendre les enjeux de restauration, d'intégrité, d'audit et de durée de conservation.",
       category: "Architecture Logicielle",
       readTime: "8 min",
-      date: "A venir", //"03 Mars 2026", //A venir
+      date: "3 Juillet 2026",
       slug: "not-only-delete-data",
+    },
+    {
+      title: "Construire mon jumeau numérique agentique : donner une voix à mes compétences",
+      description: "Mon projet pour créer un assistant conversationnel qui présente fidèlement mon parcours et guide les visiteurs de mon site.",
+      category: "Architecture Logicielle",
+      readTime: "7 min",
+      date: "5 octobre 2026",
+      slug: "mon-jumeau-numerique-agentique",
     },
     /* {
       title: "Pourquoi on ne supprime (presque) jamais les données en génie logiciel ?",
